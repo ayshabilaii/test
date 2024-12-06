@@ -1,0 +1,176 @@
+/* Basic reset for all pages */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(to bottom, #bfcfbb, #05472a, #000000); /* Top-to-bottom gradient */
+    color: black;
+}
+
+/* Content Styling for Home Page */
+#home-page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: calc(100vh - 60px);
+    padding: 20px;
+}
+
+#home-page-content h1 {
+    font-size: 3.5rem;
+    color: #fffefe;
+    margin-bottom: 20px;
+}
+
+#home-page-content p {
+    font-size: 1.2rem;
+    color: #DFF0D8; /* green for body text */
+    max-width: 800px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#home-page-content p strong {
+    color: #79bf85;
+    font-weight: bold;
+}
+
+#home-page-content img {
+    max-width: 200px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+#home-page-content img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#home-page-content p {
+    font-size: 1.2rem;
+    color: #fffdfd;
+    max-width: 800px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#home-page-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Contact Page */
+#contact-page {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    background: linear-gradient(to bottom, #bfcfbb, #05472a, #000000);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#contact-page #wrapper {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+}
+
+#contact-page h1,
+#contact-page h3 {
+    text-align: center;
+    color: #333;
+}
+
+#contact-page form {
+    margin-top: 20px;
+}
+
+#contact-page p {
+    margin-bottom: 15px;
+}
+
+#contact-page input[type="text"],
+#contact-page input[type="email"],
+#contact-page textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#contact-page input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Circular Buttons */
+#contact-page input[type="submit"],
+#contact-page input[type="reset"] {
+    font-family: 'Courier New', Courier, monospace;
+    width: 150px; /* Diameter of the circle */
+    height: 150px; /* Diameter of the circle */
+    border: none;
+    border-radius: 50%; /* Makes the button circular */
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    line-height: 150px; /* Centers text vertically inside the circle */
+    margin-right: 40px; /* Space between buttons */
+    display: inline-block; /* Ensure buttons are displayed side by side */
+    box-shadow: 10px 10px 5px rgba(132, 132, 132, 0.7);
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#contact-page input[type="submit"] {
+    background-color: #b8d8be; /* Submit button color */
+}
+
+#contact-page input[type="reset"] {
+    background-color: #d2e7d6; /* Reset button color */
+}
+
+#contact-page input[type="submit"]:hover,
+#contact-page input[type="reset"]:hover {
+    opacity: 0.8;
+    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.2), 5px 5px 10px rgba(0, 0, 0, 0.2); /* Inverted shadow effect */
+}
+
+#contact-page .button-container {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .allProjects {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    #contact-page input[type="submit"],
+    #contact-page input[type="reset"] {
+        width: 100px; /* Smaller size for smaller screens */
+        height: 100px;
+        line-height: 100px; /* Center text inside smaller circle */
+        margin-right: 10px;
+    }
+
+    #contact-page .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 20px; /* Space between buttons */
+    }
+}
